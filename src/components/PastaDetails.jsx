@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { Container, Row, Col, Card, Button } from "react-bootstrap"
 import { useParams, useNavigate } from "react-router-dom"
 import items from "../data/menu.json"
+import DishComments from "./DishComments"
 
 const PastaDetails = () => {
   const navigate = useNavigate()
@@ -30,12 +31,18 @@ const PastaDetails = () => {
                   <div>{pasta.description}</div>
                   <div>{pasta.category}</div>
                 </div>
-                <Button variant="primary" onClick={() => navigate("./menu")}>
+                <Button variant="primary" onClick={() => navigate("/menu")}>
                   Go Back
                 </Button>
               </Card.Body>
             </Card>
           )}
+          {typeof pasta === "undefined" && <h1>PASTA NOT FOUND</h1>}
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <DishComments selectedPasta={pasta} />
         </Col>
       </Row>
     </Container>

@@ -10,6 +10,7 @@ import Menu from "./components/Menu"
 // you're going to use curly brackets in an import statement if
 // the thing you're importing has not been exported as default
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import PastaDetails from "./components/PastaDetails"
 
 // BrowserRouter is the outer wrapper of our routing system
 // Just wrap EVERYTHING into it, since it allows router features
@@ -35,7 +36,7 @@ function App() {
           <Route element={<ReservationForm />} path="/booking" />
           <Route element={<ReservationList />} path="/admin" />
           <Route element={<Menu />} path="/menu" />
-          <Route element={<h1>PASTA DETAILS</h1>} path="/details/:pastaId" />
+          <Route element={<PastaDetails />} path="/details/:pastaId" />
           <Route element={<NotFound />} path="*" />
         </Routes>
       </div>
