@@ -35,6 +35,7 @@ function App() {
           <Route element={<ReservationForm />} path="/booking" />
           <Route element={<ReservationList />} path="/admin" />
           <Route element={<Menu />} path="/menu" />
+          <Route element={<h1>PASTA DETAILS</h1>} path="/details/:pastaId" />
           <Route element={<NotFound />} path="*" />
         </Routes>
       </div>
