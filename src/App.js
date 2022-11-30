@@ -35,4 +35,11 @@ function App() {
           <Route element={<ReservationForm />} path="/booking" />
           <Route element={<ReservationList />} path="/admin" />
           <Route element={<Menu />} path="/menu" />
-          <Route element={<NotFound />} p
+          <Route element={<NotFound />} path="*" />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  )
+}
+
+export default App
